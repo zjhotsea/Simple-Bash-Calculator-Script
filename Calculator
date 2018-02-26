@@ -1,0 +1,36 @@
+echo Simple Calculator
+
+a=1. Addition
+b=2. Minus
+c=3. Multiplication
+d=4. Division
+
+echo $a
+echo $b
+echo $c
+echo $d
+
+echo Choose Operator
+read Operator
+echo Enter Firstnumber
+read Firstnumber
+echo Enter Secondnumber
+read Secondnumber
+
+if [ $Operator == 1 ]; then
+result=`expr $Firstnumber + $Secondnumber`
+echo Result is $result
+elif [ $Operator == 2 ]; then
+result=`expr $Firstnumber - $Secondnumber`
+echo Result is $result
+elif [ $Operator == 3 ]; then 
+result=`expr $Firstnumber \* $Secondnumber`
+echo Result is $result
+elif [ $Operator == 4 ]; then 
+result=`expr $Firstnumber / $Secondnumber`
+echo Result is $result
+
+else 
+echo Choose a valid operator
+
+fi
